@@ -7,11 +7,13 @@
 
 namespace humhub\modules\popovervcard;
 
+use humhub\modules\popovervcard\models\Configuration;
 use Yii;
 use yii\helpers\Url;
 
 class Module extends \humhub\components\Module
 {
+
 
     /**
      * @inheritdoc
@@ -25,12 +27,25 @@ class Module extends \humhub\components\Module
 
     public function getName()
     {
-        return Yii::t('PopovervcardModule.base', 'Popover Vcard');
+        return Yii::t('PopoverVcardModule.base', 'Popover Vcard');
     }
 
     public function getDescription()
     {
-        return Yii::t('PopovervcardModule.base', 'Xyz');
+        return Yii::t('PopoverVcardModule.base', 'Xyz');
+    }
+
+
+    /**
+     * Returns the module configuration model
+     *
+     * @return Configuration
+     */
+    public function getConfiguration()
+    {
+        $model = new Configuration();
+        $model->loadSettings();
+        return $model;
     }
 
 }

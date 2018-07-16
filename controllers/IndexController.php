@@ -39,9 +39,20 @@ class IndexController extends Controller
 
         $instance = $contentContainer->getPolymorphicRelation();
 
+        /** @var Module $module */
+        $module = Yii::$app->getModule('popover-vcard');
+
         if ($instance instanceof User) {
+            if (empty($module->getConfiguration()->userEnabled)) {
+                return '';
+            }
+
             return $this->renderAjaxContent(VCardUser::widget(['user' => $instance]));
         } elseif ($instance instanceof Space) {
+            if (empty($module->getConfiguration()->spaceEnabled)) {
+                return '';
+            }
+
             return $this->renderAjaxContent(VCardSpace::widget(['space' => $instance]));
         }
 

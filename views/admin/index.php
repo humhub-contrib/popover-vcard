@@ -18,12 +18,14 @@ use yii\helpers\Html;
             <div class="col-md-6">
                 <h4><?= Yii::t('PopoverVcardModule.base', 'User VCard'); ?></h4>
                 <br/>
-                <?= $form->field($model, 'userContent')->textarea(); ?>
+                <?= $form->field($model, 'userEnabled')->checkbox(); ?>
+                <?= $form->field($model, 'userContent')->textarea(['rows' => 15]); ?>
             </div>
             <div class="col-md-6">
                 <h4><?= Yii::t('PopoverVcardModule.base', 'Space VCard'); ?></h4>
                 <br/>
-                <?= $form->field($model, 'spaceContent')->textarea(); ?>
+                <?= $form->field($model, 'spaceEnabled')->checkbox(); ?>
+                <?= $form->field($model, 'spaceContent')->textarea(['rows' => 15]); ?>
             </div>
         </div>
 

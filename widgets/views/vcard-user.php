@@ -24,11 +24,7 @@ use humhub\modules\user\widgets\Image;
             </div>
         </div>
         <div class="vcardBody">
-            <?php if (empty($user->profile->about)): ?>
-                <?= Yii::t('PopoverVcardModule.base', 'No description available!'); ?>
-            <?php else: ?>
-                <?= Html::encode($user->profile->about); ?>
-            <?php endif; ?>
+            <?= $description ?>
 
             <?= VCardAddons::widget(['container' => $user]); ?>
         </div>

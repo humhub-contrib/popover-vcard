@@ -8,7 +8,7 @@
 namespace humhub\modules\popovervcard\controllers;
 
 use humhub\modules\admin\components\Controller;
-use humhub\modules\popovervcard\models\ConfigureForm;
+use humhub\modules\popovervcard\models\Configuration;
 use Yii;
 
 class AdminController extends Controller
@@ -16,7 +16,7 @@ class AdminController extends Controller
 
     public function actionIndex()
     {
-        $model = new ConfigureForm();
+        $model = new Configuration();
         $model->loadSettings();
 
         if ($model->load(Yii::$app->request->post()) && $model->validate() && $model->saveSettings()) {

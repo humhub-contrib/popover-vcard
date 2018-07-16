@@ -29,11 +29,7 @@ use yii\helpers\Url;
             </div>
         </div>
         <div class="vcardBody">
-            <?php if (empty($space->description)): ?>
-                <?= Yii::t('PopoverVcardModule.base', 'No space description available!'); ?>
-            <?php else: ?>
-                <?= Html::encode($space->description); ?>
-            <?php endif; ?>
+            <?= $description ?>
 
             <?= VCardAddons::widget(['container' => $space]); ?>
         </div>

@@ -24,7 +24,10 @@ $(document).on('mouseenter', '[data-contentcontainer-id]', function () {
                 success: function (response) {
                     //console.log("Loading done");
                     $("#" + divId).html(response);
-                    showPopOver(trigger, response);
+
+                    if (response != '') {
+                        showPopOver(trigger, response);
+                    }
                 }
             });
         } else {

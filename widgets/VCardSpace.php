@@ -8,7 +8,9 @@
 namespace humhub\modules\popovervcard\widgets;
 
 use humhub\components\Widget;
+use humhub\modules\popovervcard\Module;
 use humhub\modules\space\models\Membership;
+use Yii;
 
 
 /**
@@ -21,10 +23,28 @@ class VCardSpace extends Widget
 
     public function run()
     {
+        /** @var Module $module */
+        $module = Yii::$app->getModule('popover-vcard');
+
         $memberCount = Membership::getSpaceMembersQuery($this->space)->count();
+
+        $twig = new \Twig_Environment(new \Twig_Loader_String());
+        $templateParams = ['space' => $this->space];
+
+        $description = '';
+        try {
+            $description = $twig->render($module->getConfiguration()->spaceContent, $templateParams);
+        } catch (\Twig_Error_Loader $e) {
+            $description = $e->getMessage();
+        } catch (\Twig_Error_Runtime $e) {
+            $description = $e->getMessage();
+        } catch (\Twig_Error_Syntax $e) {
+            $description = $e->getMessage();
+        }
 
         return $this->render('vcard-space', [
             'space' => $this->space,
+            'description' => $description,
             'memberCount' => $memberCount
         ]);
     }
