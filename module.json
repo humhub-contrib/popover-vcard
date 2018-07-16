@@ -1,0 +1,12 @@
+{
+  "id": "popover-vcard",
+  "name": "VCard Popover",
+  "description": "",
+  "keywords": [
+    ""
+  ],
+  "version": "1.0.0",
+  "humhub": {
+    "minVersion": "1.3"
+  }
+}
