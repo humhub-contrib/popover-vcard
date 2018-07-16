@@ -25,12 +25,12 @@ class Module extends \humhub\components\Module
 
     public function getName()
     {
-        return Yii::t('LegalModule.base', 'Popover Vcard');
+        return Yii::t('PopovervcardModule.base', 'Popover Vcard');
     }
 
     public function getDescription()
     {
-        return Yii::t('LegalModule.base', 'Xyz');
+        return Yii::t('PopovervcardModule.base', 'Xyz');
     }
 
 }
