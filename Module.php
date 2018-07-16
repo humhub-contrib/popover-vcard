@@ -15,6 +15,8 @@ class Module extends \humhub\components\Module
 {
 
 
+    public $resourcesPath = 'resources';
+
     /**
      * @inheritdoc
      */
@@ -27,12 +29,12 @@ class Module extends \humhub\components\Module
 
     public function getName()
     {
-        return Yii::t('PopoverVcardModule.base', 'Popover Vcard');
+        return Yii::t('PopoverVcardModule.base', 'VCard Popover');
     }
 
     public function getDescription()
     {
-        return Yii::t('PopoverVcardModule.base', 'Xyz');
+        return Yii::t('PopoverVcardModule.base', 'Shows a vcard popover in stream user and space links.');
     }
 
 

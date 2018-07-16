@@ -29,7 +29,7 @@ class VCardSpace extends Widget
         $memberCount = Membership::getSpaceMembersQuery($this->space)->count();
 
         $twig = new \Twig_Environment(new \Twig_Loader_String());
-        $templateParams = ['space' => $this->space];
+        $templateParams = ['space' => $this->space, 'memberCount' => $memberCount];
 
         $description = '';
         try {
