@@ -1,10 +1,10 @@
 ## Description
 
-This module shows a overlay of further information on stream links to spaces or user profiles.
+This module shows an overlay with further information on stream links to spaces or user profiles.
 
 ### Features
 
-- Integrated individual templating of overlays
+- Individual templating of overlay vcards
  
 
 __Author:__ HumHub
