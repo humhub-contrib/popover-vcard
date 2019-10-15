@@ -51,17 +51,20 @@ $(document).on('mouseleave', '[data-contentcontainer-id]', function () {
 });
 
 function showPopOver(trigger, content) {
-    $(trigger).popover({
+    var $trigger = $(trigger);
+
+    $trigger.popover({
         trigger: 'manual',
         html: true,
         placement: 'auto left',
         container: 'body',
         content: content,
         animation: true
-    });
+    }) .data('bs.popover').tip().addClass('vcardPopover');
 
-    $(trigger).popover('show');
-    $('.popover').on('mouseleave', function () {
-        $(trigger).popover('hide');
+    $trigger.popover('show');
+
+    $('.vcardPopover').one('mouseleave', function () {
+        $trigger.popover('hide');
     });
 }

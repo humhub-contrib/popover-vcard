@@ -44,17 +44,18 @@
 .vcardFooter {
     border-top: 1px solid #c5c5c5;
     background-color: #EDEDED;
-    height: 40px;
+    height: 55px;
     line-height: 40px;
     padding-left: 6px;
     padding-right: 6px;
 }
 
-.popover {
+.vcardPopover {
     max-width: 700px;
-    padding: 0px !important;
+    background-color: #EDEDED;
+    padding: 0 !important;
 }
 
-.popover-content {
-    padding: 0px !important;
+.vcardPopover .popover-content {
+    padding: 0 !important;
 }
