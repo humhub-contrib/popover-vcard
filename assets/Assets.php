@@ -13,7 +13,7 @@ class Assets extends AssetBundle
 {
 
     public $publishOptions = [
-        'forceCopy' => true
+        'forceCopy' => false
     ];
     public $sourcePath = '@popover-vcard/resources';
     public $css = [
