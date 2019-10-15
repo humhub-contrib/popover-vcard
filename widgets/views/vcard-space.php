@@ -13,6 +13,7 @@ use yii\helpers\Url;
 
 /* @var $this \humhub\components\View */
 /* @var $space \humhub\modules\space\models\Space */
+/* @var $memberCount integer */
 
 ?>
 
@@ -21,7 +22,7 @@ use yii\helpers\Url;
         <div class="vcardHeader"
              style="<?php if ($space->getProfileBannerImage()->hasImage()): ?> background-image: url(<?= $space->getProfileBannerImage()->getUrl(); ?>);<?php endif; ?>">
             <div class="headerContent">
-                <div class="imageWrapper pull-left"><?= Image::widget(['space' => $space, 'width' => 60]); ?></div>
+                <div class="imageWrapper pull-left"><?= Image::widget(['space' => $space, 'width' => 95]); ?></div>
                 <div class="displayName"><?= Html::encode($space->name); ?></div>
                 <div class="title"><i
                             class="fa fa-users"></i> <?= Yii::t('PopoverVcardModule.base', '{count} members', ['count' => $memberCount]); ?>

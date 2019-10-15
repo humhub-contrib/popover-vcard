@@ -20,7 +20,7 @@ use yii\helpers\Url;
         <div class="vcardHeader"
              style="<?php if ($user->getProfileBannerImage()->hasImage()): ?> background-image: url(<?= $user->getProfileBannerImage()->getUrl(); ?>);<?php endif; ?>">
             <div class="headerContent">
-                <div class="imageWrapper pull-left"><?= Image::widget(['user' => $user, 'width' => 60]); ?></div>
+                <div class="imageWrapper pull-left"><?= Image::widget(['user' => $user, 'width' => 95]); ?></div>
                 <div class="displayName"><?= Html::encode($user->displayName); ?></div>
                 <div class="title"><?= Html::encode($user->profile->title); ?></div>
             </div>

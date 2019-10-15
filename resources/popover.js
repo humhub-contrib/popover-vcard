@@ -52,8 +52,9 @@ $(document).on('mouseleave', '[data-contentcontainer-id]', function () {
 
 function showPopOver(trigger, content) {
     var $trigger = $(trigger);
+    var $content = $(content);
 
-    $trigger.popover({
+    $popover = $trigger.popover({
         trigger: 'manual',
         html: true,
         placement: 'auto left',
@@ -63,6 +64,12 @@ function showPopOver(trigger, content) {
     }) .data('bs.popover').tip().addClass('vcardPopover');
 
     $trigger.popover('show');
+
+    // Popover seems to get rid of inline styles, so we replace the content
+    $popover.find('.vcardContent').replaceWith($content.find('.vcardContent'));
+
+    // Make sure the image itself is not a popover target
+    $popover.find('[data-contentcontainer-id]').removeAttr('data-contentcontainer-id');
 
     $('.vcardPopover').one('mouseleave', function () {
         $trigger.popover('hide');

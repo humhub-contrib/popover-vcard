@@ -5,6 +5,8 @@ Changelog
 -----------------------
 - Fix #1: Vcard Popover css breaks tour css
 - Fix: Footer color issue
+- Fix #2: Popover of spaces without profile image looks broken
+- Fix: Popover removes inline styles
 
 1.0.0  (July 17, 2018)
 -----------------------
