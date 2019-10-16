@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.0.1
+1.0.1  (October 16, 2019)
 -----------------------
 - Fix #1: Vcard Popover css breaks tour css
 - Fix: Footer color issue
