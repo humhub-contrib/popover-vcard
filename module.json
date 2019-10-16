@@ -5,9 +5,9 @@
   "keywords": [
     ""
   ],
-  "version": "1.0.1",
+  "version": "1.0.2",
   "humhub": {
-    "minVersion": "1.3.0-beta.2"
+    "minVersion": "1.3.0"
   },
   "screenshots": ["resources/screen1.PNG", "resources/screen2.PNG"]
 }
