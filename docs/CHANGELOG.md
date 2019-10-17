@@ -1,6 +1,12 @@
 Changelog
 =========
 
+1.0.3  (October 17, 2019)
+-----------------------
+- Enh: Support `[data-contentcontainer-guid]` e.g. in mentionings
+- Enh: Refactored Js as HumHub module
+- Fix: Force close on pjax load
+
 1.0.2  (October 16, 2019)
 -----------------------
 - Fix #1: Vcard Popover css breaks tour css

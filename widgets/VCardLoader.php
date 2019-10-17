@@ -21,10 +21,6 @@ class VCardLoader extends Widget
     public function run() {
 
         Assets::register($this->view);
-
-        $this->view->registerJsVar('vCardDelay', 500);
-        $this->view->registerJsVar('vCardLoadUrl', Url::to(['/popover-vcard/index/load']));
-
         return;
     }
 

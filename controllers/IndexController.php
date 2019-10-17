@@ -28,11 +28,25 @@ class IndexController extends Controller
         return $this->render('index');
     }
 
+    /**
+     * @return string|HttpException
+     * @throws HttpException
+     * @throws \yii\db\IntegrityException
+     */
     public function actionLoad()
     {
-        $contentContainerId = Yii::$app->request->post('contentContainerId');
+        $contentContainerId = Yii::$app->request->post('id');
+        $contentContainerGuid = Yii::$app->request->post('guid');
 
-        $contentContainer = ContentContainer::findOne(['id' => $contentContainerId]);
+
+        if($contentContainerId !== null) {
+            $contentContainer = ContentContainer::findOne(['id' => $contentContainerId]);
+        } elseif ($contentContainerGuid !== null) {
+            $contentContainer = ContentContainer::findOne(['guid' => $contentContainerGuid]);
+        } else {
+            throw new HttpException(400, 'No container provided');
+        }
+
         if ($contentContainer === null) {
             return new HttpException(404, 'Could not find container!');
         }
