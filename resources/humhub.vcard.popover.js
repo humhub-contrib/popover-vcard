@@ -23,6 +23,11 @@ humhub.module('vcard.popover', function (module, require, $) {
         }
 
         $(document).on('mouseenter', '[data-contentcontainer-id],[data-contentcontainer-guid]', function () {
+
+            if(ignoreElement(this)) {
+                return;
+            }
+
             var trigger = this;
             var selector = '#' + getVCardId(trigger);
             clearTimeout(vCardDelayTimer);
@@ -36,6 +41,10 @@ humhub.module('vcard.popover', function (module, require, $) {
         });
 
         $(document).on('mouseleave', '[data-contentcontainer-id],[data-contentcontainer-guid]', function () {
+            if(ignoreElement(this)) {
+                return;
+            }
+
             clearTimeout(vCardDelayTimer);
 
             var $this = $(this);
@@ -45,6 +54,11 @@ humhub.module('vcard.popover', function (module, require, $) {
                 }
             }, 300);
         });
+    }
+
+    function ignoreElement(elem)
+    {
+        return $(elem).closest('#user-account-image, #space-menu-dropdown, #space-menu, .profile-user-photo-container').length;
     }
 
     function getVCardId(trigger) {

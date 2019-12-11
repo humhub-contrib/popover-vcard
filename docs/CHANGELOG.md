@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.0.4  (December 11, 2019)
+-----------------------
+- Fix: Added some elements to ignore (fixes some HumHub v1.4 issues)
+
 1.0.3  (October 17, 2019)
 -----------------------
 - Enh: Support `[data-contentcontainer-guid]` e.g. in mentionings
