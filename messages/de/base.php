@@ -14,7 +14,7 @@ return array (
   'The first name of the user.' => 'Der Vorname dieses Nutzers.',
   'The last name of the user.' => 'Der Nachname dieses Nutzers.',
   'The name of this space.' => 'Der Name des Spaces.',
-  'Twig for Template Designers' => '',
+  'Twig for Template Designers' => 'Twig für Template-Entwickler',
   'User VCard' => 'Benutzer VCard',
   'VCard Popover' => 'VCard Popover',
   'Variable name' => 'Variabler Name',
