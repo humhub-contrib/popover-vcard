@@ -4,7 +4,7 @@ return array (
   'Description' => 'توضیحات',
   'Each available profile field.' => '',
   'Open profile' => '',
-  'Open space' => '',
+  'Open space' => 'انجمن باز',
   'See more information about the template language:' => '',
   'Shows a vcard popover in stream user and space links.' => '',
   'Space VCard' => '',
