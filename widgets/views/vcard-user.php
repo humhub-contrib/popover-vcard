@@ -35,7 +35,7 @@ use yii\helpers\Url;
                 <?= Html::a(Yii::t('MailModule.base', 'Send message'), ['/mail/mail/create', 'ajax' => 1, 'userGuid' => $user->guid], ['class' => 'btn btn-primary btn-sm', 'data-target' => '#globalModal']); ?>
             <?php endif; ?>
             <div class="pull-right">
-                <a href="<?= Url::to(['/', 'container' => $user]); ?>"
+                <a href="<?= Url::to(['/user/profile', 'container' => $user]); ?>"
                    class="btn btn-primary btn-sm"><?= Yii::t('PopoverVcardModule.base', 'Open profile'); ?></a>
             </div>
         </div>
