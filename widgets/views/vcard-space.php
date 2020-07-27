@@ -36,7 +36,7 @@ use yii\helpers\Url;
         </div>
         <div class="vcardFooter">
             <div class="pull-right">
-                <a href="<?= Url::to(['/', 'container' => $space]); ?>"
+                <a href="<?= Url::to(['/space/space', 'container' => $space]); ?>"
                    class="btn btn-primary btn-sm"><?= Yii::t('PopoverVcardModule.base', 'Open space'); ?></a>
             </div>
         </div>
