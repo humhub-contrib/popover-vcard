@@ -1,13 +1,23 @@
 {
   "id": "popover-vcard",
   "name": "VCard Popover",
-  "description": "Shows a VCard popover in streams for user and space links.",
-  "keywords": [
-    ""
-  ],
+  "description": "Shows a virtual business card displaying brief information about the user when hovering over a user's profile picture or name",
+  "keywords": ["business card, popover, hover, profile information"],
   "version": "1.0.4",
   "humhub": {
     "minVersion": "1.3.0"
   },
-  "screenshots": ["resources/screen1.PNG", "resources/screen2.PNG"]
+   "homepage": "https://github.com/humhub-contrib/popover-vcard",
+  "authors": [
+    {
+        "name": "Lucas Bartholemy"
+    },
+    {
+        "name": "Julian Harrer"
+    }
+  ]
+  "screenshots": [
+  "resources/screen1.PNG", 
+  "resources/screen2.PNG"
+  ]
 }
