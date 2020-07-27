@@ -1,6 +1,6 @@
 {
   "id": "popover-vcard",
-  "name": "VCard Popover",
+  "name": "Virtual Card Popover",
   "description": "Shows a virtual business card displaying brief information about the user when hovering over a user's profile picture or name",
   "keywords": ["business card, popover, hover, profile information"],
   "version": "1.0.5",
