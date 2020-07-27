@@ -1,13 +1,9 @@
-## Description
+## V Card Popover
 
-This module shows an overlay with further information on stream links to spaces or user profiles.
+Adds a virtual business card that displays brief information about the user when hovering over a user's profile picture or name. Which information is displayed can be individualized by the administrator.
 
-### Features
+## Overview
 
-- Individual templating of overlay vcards
- 
-
-__Author:__ HumHub
-__Author website:__ [www.humhub.org](http://www.humhub.org)
-
-
+- Individual design
+- Content customizable
+- Can be conntected to the 'Your Acclaim' Module in order to display badges within the popover
