@@ -11,7 +11,7 @@ use humhub\modules\popovervcard\widgets\VCardAddons;
 use humhub\modules\space\widgets\Image;
 use yii\helpers\Url;
 
-/* @var $this \humhub\components\View */
+/* @var $this \humhub\modules\ui\view\components\View */
 /* @var $space \humhub\modules\space\models\Space */
 /* @var $memberCount integer */
 

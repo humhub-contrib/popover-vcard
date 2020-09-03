@@ -9,7 +9,7 @@ use humhub\modules\popovervcard\widgets\VCardSpace;
 use humhub\modules\popovervcard\widgets\VCardUser;
 
 
-/* @var $this \humhub\components\View */
+/* @var $this \humhub\modules\ui\view\components\View */
 
 $user = \humhub\modules\user\models\User::findOne(['id' => 1]);
 $space = \humhub\modules\space\models\Space::findOne(['id' => 1]);

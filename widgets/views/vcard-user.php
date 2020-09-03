@@ -10,7 +10,7 @@ use humhub\modules\popovervcard\widgets\VCardAddons;
 use humhub\modules\user\widgets\Image;
 use yii\helpers\Url;
 
-/* @var $this \humhub\components\View */
+/* @var $this \humhub\modules\ui\view\components\View */
 /* @var $user \humhub\modules\user\models\User */
 
 ?>
