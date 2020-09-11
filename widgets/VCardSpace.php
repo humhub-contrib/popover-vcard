@@ -10,6 +10,7 @@ namespace humhub\modules\popovervcard\widgets;
 use humhub\components\Widget;
 use humhub\modules\popovervcard\Module;
 use humhub\modules\space\models\Membership;
+use humhub\modules\space\models\Space;
 use Yii;
 
 
@@ -23,6 +24,9 @@ class VCardSpace extends Widget
 
     public function run()
     {
+        if($this->space->visibility === Space::VISIBILITY_NONE) {
+            return false;
+        }
         /** @var Module $module */
         $module = Yii::$app->getModule('popover-vcard');
 

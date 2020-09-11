@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.0.6 (Unreleased)
+------------------
+- Enh #5: No one can see private spaces popover-vcard
+
 1.0.5 (July 27, 2020)
 ---------------------
 - Fix #4: Open profile/space link not working bug
