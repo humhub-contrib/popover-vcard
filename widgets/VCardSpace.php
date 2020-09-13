@@ -20,11 +20,15 @@ use Yii;
  */
 class VCardSpace extends Widget
 {
+    
+    /**
+     * @var Space
+     */
     public $space;
 
     public function run()
     {
-        if($this->space->visibility === Space::VISIBILITY_NONE) {
+        if($this->space->visibility === Space::VISIBILITY_NONE && !$this->space->isMember()) {
             return false;
         }
         /** @var Module $module */
