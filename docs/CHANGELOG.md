@@ -3,7 +3,7 @@ Changelog
 
 1.0.6 (Unreleased)
 ------------------
-- Enh #5: No one can see private spaces popover-vcard
+- Enh #5: Non members cannot see private spaces popover-vcard
 
 1.0.5 (July 27, 2020)
 ---------------------
