@@ -4,7 +4,7 @@ return array (
   'Description' => 'Описание',
   'Each available profile field.' => '',
   'Open profile' => '',
-  'Open space' => '',
+  'Open space' => 'Открыть сообщество',
   'See more information about the template language:' => '',
   'Shows a vcard popover in stream user and space links.' => '',
   'Space VCard' => '',
@@ -19,5 +19,5 @@ return array (
   'VCard Popover' => '',
   'Variable name' => '',
   'You can use any field from the user model.' => '',
-  '{count} members' => '',
+  '{count} members' => '{count} участников',
 );
