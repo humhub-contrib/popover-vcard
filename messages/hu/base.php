@@ -1,9 +1,9 @@
 <?php
 return array (
-  '<strong>VCard</strong> Configuration' => '',
+  '<strong>VCard</strong> Configuration' => '<strong>VCard</strong> konfiguráció',
   'Description' => 'Leírás',
-  'Each available profile field.' => '',
-  'Open profile' => '',
+  'Each available profile field.' => 'Minden elérhető profilmező.',
+  'Open profile' => 'Profil megnyitása',
   'Open space' => 'Nyitott közösség',
   'See more information about the template language:' => '',
   'Shows a vcard popover in stream user and space links.' => '',
