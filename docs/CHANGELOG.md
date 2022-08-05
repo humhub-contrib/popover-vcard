@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.0 (Unreleased)
+------------------
+- Fix: Non members cannot see private spaces popover-vcard
+
 1.0.6 (Unreleased)
 ------------------
 - Enh #5: Non members cannot see private spaces popover-vcard

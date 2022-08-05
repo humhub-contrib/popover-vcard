@@ -9,6 +9,11 @@ namespace humhub\modules\popovervcard\widgets;
 
 use humhub\components\Widget;
 use humhub\modules\popovervcard\Module;
+use Twig\Environment;
+use Twig\Error\LoaderError;
+use Twig\Error\RuntimeError;
+use Twig\Error\SyntaxError;
+use Twig\Loader\ArrayLoader;
 use Yii;
 
 
@@ -25,17 +30,13 @@ class VCardUser extends Widget
         /** @var Module $module */
         $module = Yii::$app->getModule('popover-vcard');
 
-        $twig = new \Twig_Environment(new \Twig_Loader_String());
+        $twig = new Environment(new ArrayLoader());
         $templateParams = ['user' => $this->user, 'profile' => $this->user->profile];
 
-        $description = '';
         try {
-            $description = $twig->render($module->getConfiguration()->userContent, $templateParams);
-        } catch (\Twig_Error_Loader $e) {
-            $description = $e->getMessage();
-        } catch (\Twig_Error_Runtime $e) {
-            $description = $e->getMessage();
-        } catch (\Twig_Error_Syntax $e) {
+            $description = $twig->createTemplate($module->getConfiguration()->userContent)
+                ->render($templateParams);
+        } catch (LoaderError | RuntimeError | SyntaxError $e) {
             $description = $e->getMessage();
         }
 
