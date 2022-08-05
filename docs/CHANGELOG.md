@@ -1,12 +1,9 @@
 Changelog
 =========
 
-1.1.0 (Unreleased)
-------------------
-- Fix #15: Non members cannot see private spaces popover-vcard
-
-1.0.6 (Unreleased)
-------------------
+1.1.0 (August 5, 2022)
+----------------------
+- Fix #15: Fixed HumHub 1.12+ support / Twig 3 Migration
 - Enh #5: Non members cannot see private spaces popover-vcard
 
 1.0.5 (July 27, 2020)
