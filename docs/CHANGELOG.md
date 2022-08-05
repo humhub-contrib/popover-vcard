@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1.0 (August 5, 2022)
+1.1.1 (August 5, 2022)
 ----------------------
 - Fix #15: Fixed HumHub 1.12+ support / Twig 3 Migration
 - Enh #5: Non members cannot see private spaces popover-vcard
