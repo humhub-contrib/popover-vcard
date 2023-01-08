@@ -19,5 +19,5 @@ return array (
   'VCard Popover' => '<em>Popover</em> de VCard',
   'Variable name' => 'Nome da variável',
   'You can use any field from the user model.' => 'Podes usar qualquer campo do modelo pessoal.',
-  '{count} members' => '{count} participantes',
+  '{count} members' => '{count} membros',
 );
