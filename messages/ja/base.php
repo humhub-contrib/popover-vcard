@@ -5,7 +5,7 @@ return array (
   'Each available profile field.' => '使用可能な各プロファイル フィールド。',
   'Open profile' => 'プロフィールを開く',
   'Open space' => 'スペースを開く',
-  'See more information about the template language:' => 'テンプレート言語の詳細については次を参照して下さい。',
+  'See more information about the template language:' => 'テンプレート言語の詳細については次を参照してください：',
   'Shows a vcard popover in stream user and space links.' => 'ストリーム ユーザーおよびスペース リンクに vcard ポップオーバーを表示します。',
   'Space VCard' => 'スペース Vcard',
   'The current member count.' => '現在のメンバー数。',
