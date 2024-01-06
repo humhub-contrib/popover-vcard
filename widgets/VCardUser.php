@@ -13,7 +13,9 @@ use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
+use Twig\Extension\SandboxExtension;
 use Twig\Loader\ArrayLoader;
+use Twig\Sandbox\SecurityPolicy;
 use Yii;
 
 
@@ -31,6 +33,8 @@ class VCardUser extends Widget
         $module = Yii::$app->getModule('popover-vcard');
 
         $twig = new Environment(new ArrayLoader());
+        $twig->addExtension(new SandboxExtension(new SecurityPolicy(['if', 'for'], ['escape']), true));
+
         $templateParams = ['user' => $this->user, 'profile' => $this->user->profile];
 
         try {

@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.2 (January 6, 2024)
+----------------------
+- Enh: Added Twig SecurityPolicy
+
 1.1.1 (August 5, 2022)
 ----------------------
 - Fix #15: Fixed HumHub 1.12+ support / Twig 3 Migration

@@ -15,7 +15,9 @@ use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
 use Twig\Error\SyntaxError;
+use Twig\Extension\SandboxExtension;
 use Twig\Loader\ArrayLoader;
+use Twig\Sandbox\SecurityPolicy;
 use Yii;
 
 
@@ -42,6 +44,8 @@ class VCardSpace extends Widget
         $memberCount = Membership::getSpaceMembersQuery($this->space)->count();
 
         $twig = new Environment(new ArrayLoader());
+        $twig->addExtension(new SandboxExtension(new SecurityPolicy(['if', 'for'], ['escape']), true));
+
         $templateParams = ['space' => $this->space, 'memberCount' => $memberCount];
 
         try {
