@@ -5,7 +5,7 @@ Changelog
 ----------------------
 - Fix: Missing Twig SecurityPolicy rule
 
-- 1.1.2 (January 6, 2024)
+1.1.2 (January 6, 2024)
 ----------------------
 - Enh: Added Twig SecurityPolicy
 
