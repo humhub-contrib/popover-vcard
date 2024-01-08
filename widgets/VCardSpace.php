@@ -44,7 +44,7 @@ class VCardSpace extends Widget
         $memberCount = Membership::getSpaceMembersQuery($this->space)->count();
 
         $twig = new Environment(new ArrayLoader());
-        $twig->addExtension(new SandboxExtension(new SecurityPolicy(['if', 'for'], ['escape']), true));
+        $twig->addExtension(new SandboxExtension(new SecurityPolicy(['if', 'for'], ['escape', 'e']), true));
 
         $templateParams = ['space' => $this->space, 'memberCount' => $memberCount];
 

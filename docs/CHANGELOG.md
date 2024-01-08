@@ -1,7 +1,11 @@
 Changelog
 =========
 
-1.1.2 (January 6, 2024)
+1.1.3 (January 8, 2024)
+----------------------
+- Fix: Missing Twig SecurityPolicy rule
+
+- 1.1.2 (January 6, 2024)
 ----------------------
 - Enh: Added Twig SecurityPolicy
 
