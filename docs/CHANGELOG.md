@@ -1,5 +1,8 @@
 Changelog
 =========
+TBA
+----------------------
+- Enh: use color variables
 
 1.1.3 (January 8, 2024)
 ----------------------
