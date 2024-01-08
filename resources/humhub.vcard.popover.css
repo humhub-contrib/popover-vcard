@@ -21,12 +21,12 @@
 .vcardHeader .displayName {
     padding-top: 10px;
     font-size: 24px;
-    color: var(--text-color-contrast)
+    color: white
 }
 
 .vcardHeader .title {
     font-size: 16px;
-    color: var(--text-color-contrast)
+    color: white
 }
 
 .vcardHeader .imageWrapper {
@@ -38,11 +38,11 @@
 
 .vcardBody {
     padding: 6px;
-    border-top: 1px solid #c5c5c5;
+    border-top: 1px solid var(--background3);
 }
 
 .vcardFooter {
-    border-top: 1px solid #c5c5c5;
+    border-top: 1px solid var(--background3);
     background-color: var(--background-color-page);
     height: 55px;
     line-height: 40px;
