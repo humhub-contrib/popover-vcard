@@ -8,7 +8,7 @@
 }
 
 .vcardContent {
-    background-color: white;
+    background-color: var(--background-color-main);
     width: 500px !important;
 }
 
@@ -32,18 +32,18 @@
 .vcardHeader .imageWrapper {
     margin: 8px;
     margin-right: 16px;
-    background-color: white;
+    background-color: var(--background-color-main);
     padding: 2px;
 }
 
 .vcardBody {
     padding: 6px;
-    border-top: 1px solid #c5c5c5;
+    border-top: 1px solid var(--background3);
 }
 
 .vcardFooter {
-    border-top: 1px solid #c5c5c5;
-    background-color: #EDEDED;
+    border-top: 1px solid var(--background3);
+    background-color: var(--background-color-page);
     height: 55px;
     line-height: 40px;
     padding-left: 6px;
@@ -52,7 +52,7 @@
 
 .vcardPopover {
     max-width: 700px;
-    background-color: #EDEDED;
+    background-color: var(--background-color-page);
     padding: 0 !important;
 }
 
