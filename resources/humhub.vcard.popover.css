@@ -32,7 +32,6 @@
 .vcardHeader .imageWrapper {
     margin: 8px;
     margin-right: 16px;
-    background-color: var(--background-color-main);
     padding: 2px;
 }
 
