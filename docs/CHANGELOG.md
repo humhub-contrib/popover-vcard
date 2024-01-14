@@ -3,6 +3,7 @@ Changelog
 TBA
 ----------------------
 - Enh: use color variables
+- Fix: Remove square background from round profile image
 
 1.1.3 (January 8, 2024)
 ----------------------
