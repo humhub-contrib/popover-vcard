@@ -19,5 +19,5 @@ return array (
   'VCard Popover' => '',
   'Variable name' => '',
   'You can use any field from the user model.' => '',
-  '{count} members' => '',
+  '{count} members' => '{count}명의 회원',
 );
