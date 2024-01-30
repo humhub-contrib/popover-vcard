@@ -1,7 +1,7 @@
 Changelog
 =========
 
-1.1.5 (Unreleased)
+1.1.5 (January 30, 2024)
 ------------------------
 - Enh: Add profile attributes to whitelist
 
