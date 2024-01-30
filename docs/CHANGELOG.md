@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.5 (Unreleased)
+------------------------
+- Enh: Add profile attributes to whitelist
+
 1.1.4 (January 22, 2024)
 ------------------------
 - Enh: use color variables
