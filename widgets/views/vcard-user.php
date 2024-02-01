@@ -32,7 +32,7 @@ use yii\helpers\Url;
         </div>
         <div class="vcardFooter">
             <?php if (Yii::$app->hasModule('mail') && !Yii::$app->user->isGuest && Yii::$app->user->id !== $user->id): ?>
-                <?= Html::a(Yii::t('MailModule.base', 'Send message'), ['/mail/mail/create', 'ajax' => 1, 'userGuid' => $user->guid], ['class' => 'btn btn-primary btn-sm', 'data-target' => '#globalModal']); ?>
+                <?= Html::a(Yii::t('PopoverVcardModule.base', 'Send message'), ['/mail/mail/create', 'ajax' => 1, 'userGuid' => $user->guid], ['class' => 'btn btn-primary btn-sm', 'data-target' => '#globalModal']); ?>
             <?php endif; ?>
             <div class="pull-right">
                 <a href="<?= Url::to(['/user/profile', 'container' => $user]); ?>"
