@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.6 (Unreleased)
+------------------------
+- Fix: Fix translation category
+
 1.1.5 (January 30, 2024)
 ------------------------
 - Enh: Add profile attributes to whitelist
