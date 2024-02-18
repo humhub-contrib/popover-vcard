@@ -1,12 +1,13 @@
 <?php
 
 return [
+    'Open space' => 'Otvorený priestor',
     '<strong>VCard</strong> Configuration' => '',
     'Description' => '',
     'Each available profile field.' => '',
     'Open profile' => '',
-    'Open space' => '',
     'See more information about the template language:' => '',
+    'Send message' => '',
     'Shows a vcard popover in stream user and space links.' => '',
     'Space VCard' => '',
     'The current member count.' => '',
