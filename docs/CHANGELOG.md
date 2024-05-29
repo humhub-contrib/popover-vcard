@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.2.0 (Unreleased)
+------------------
+- Fix: Update module resources path
+
 1.1.6 (Unreleased)
 ------------------------
 - Fix: Fix translation category
