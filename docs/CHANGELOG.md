@@ -4,6 +4,7 @@ Changelog
 1.1.6 (Unreleased)
 ------------------------
 - Fix: Fix translation category
+- Fix: Remove module name translation
 
 1.1.5 (January 30, 2024)
 ------------------------
