@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.1.6 (Unreleased)
-------------------------
+1.1.6 (September 27, 2024)
+---------------------------
 - Fix: Fix translation category
 - Fix: Remove module name translation
 
