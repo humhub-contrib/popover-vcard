@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.1.7 (Unreleased)
+---------------------------
+- Enh #27: Use PHP CS Fixer
+
 1.1.6 (September 27, 2024)
 ---------------------------
 - Fix: Fix translation category

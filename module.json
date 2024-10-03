@@ -3,7 +3,7 @@
   "name": "Virtual Card Popover",
   "description": "Shows a virtual business card displaying brief information about the user when hovering over a user's profile picture or name",
   "keywords": ["business card, popover, hover, profile information"],
-  "version": "1.1.6",
+  "version": "1.1.7",
   "humhub": {
     "minVersion": "1.14"
   },
