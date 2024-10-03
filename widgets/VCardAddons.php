@@ -10,7 +10,6 @@ namespace humhub\modules\popovervcard\widgets;
 use humhub\modules\content\components\ContentContainerActiveRecord;
 use humhub\widgets\BaseStack;
 
-
 /**
  * Class VCardAddons
  * @package humhub\modules\popovervcard\widgets

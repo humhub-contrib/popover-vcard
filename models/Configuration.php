@@ -12,8 +12,6 @@ use Yii;
 
 class Configuration extends \yii\base\Model
 {
-
-
     public $userEnabled;
     public $userContent;
     public $userDefaultContent = "{% if profile.about %}\n\t{{ profile.about|e }}\n{% else %}\n\tNo user description available.\n{% endif %}";
@@ -29,7 +27,7 @@ class Configuration extends \yii\base\Model
     {
         return [
             [['userEnabled', 'spaceEnabled'], 'boolean'],
-            [['userContent', 'spaceContent'], 'string']
+            [['userContent', 'spaceContent'], 'string'],
         ];
     }
 

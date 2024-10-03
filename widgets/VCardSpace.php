@@ -20,14 +20,12 @@ use Twig\Loader\ArrayLoader;
 use Twig\Sandbox\SecurityPolicy;
 use Yii;
 
-
 /**
  * Class VCardUser
  * @package humhub\modules\popovervcard\widgets
  */
 class VCardSpace extends Widget
 {
-    
     /**
      * @var Space
      */
@@ -35,7 +33,7 @@ class VCardSpace extends Widget
 
     public function run()
     {
-        if($this->space->visibility === Space::VISIBILITY_NONE && !$this->space->isMember()) {
+        if ($this->space->visibility === Space::VISIBILITY_NONE && !$this->space->isMember()) {
             return false;
         }
         /** @var Module $module */
@@ -58,7 +56,7 @@ class VCardSpace extends Widget
         return $this->render('vcard-space', [
             'space' => $this->space,
             'description' => $description,
-            'memberCount' => $memberCount
+            'memberCount' => $memberCount,
         ]);
     }
 

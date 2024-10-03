@@ -10,13 +10,11 @@ namespace humhub\modules\popovervcard;
 use humhub\modules\popovervcard\widgets\VCardLoader;
 use humhub\widgets\LayoutAddons;
 
-
 /**
  * @author luke
  */
 class Events
 {
-
     public static function onLayoutAddonsInit($event)
     {
 

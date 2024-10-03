@@ -13,16 +13,15 @@ use yii\web\AssetBundle;
 
 class Assets extends AssetBundle
 {
-
     public $publishOptions = [
-        'forceCopy' => false
+        'forceCopy' => false,
     ];
     public $sourcePath = '@popover-vcard/resources';
     public $css = [
-        'humhub.vcard.popover.css'
+        'humhub.vcard.popover.css',
     ];
     public $js = [
-        'humhub.vcard.popover.js'
+        'humhub.vcard.popover.js',
     ];
 
     /**
@@ -35,7 +34,7 @@ class Assets extends AssetBundle
 
         $view->registerJsConfig('vcard.popover', [
             'delay' => 500,
-            'loadUrl' =>  Url::to(['/popover-vcard/index/load'])
+            'loadUrl' =>  Url::to(['/popover-vcard/index/load']),
         ]);
     }
 
