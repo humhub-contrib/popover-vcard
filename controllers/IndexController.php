@@ -16,7 +16,6 @@ use humhub\modules\user\models\User;
 use Yii;
 use yii\web\HttpException;
 
-
 /**
  * Class IndexController
  * @package humhub\modules\popovervcard\controllers
@@ -39,7 +38,7 @@ class IndexController extends Controller
         $contentContainerGuid = Yii::$app->request->post('guid');
 
 
-        if($contentContainerId !== null) {
+        if ($contentContainerId !== null) {
             $contentContainer = ContentContainer::findOne(['id' => $contentContainerId]);
         } elseif ($contentContainerGuid !== null) {
             $contentContainer = ContentContainer::findOne(['guid' => $contentContainerGuid]);

@@ -6,10 +6,10 @@
  */
 
 namespace humhub\modules\popovervcard\widgets;
+
 use humhub\components\Widget;
 use humhub\modules\popovervcard\assets\Assets;
 use yii\helpers\Url;
-
 
 /**
  * Class VCardLoader
@@ -17,8 +17,8 @@ use yii\helpers\Url;
  */
 class VCardLoader extends Widget
 {
-
-    public function run() {
+    public function run()
+    {
 
         Assets::register($this->view);
         return;

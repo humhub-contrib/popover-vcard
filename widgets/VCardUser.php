@@ -20,7 +20,6 @@ use Twig\Loader\ArrayLoader;
 use Twig\Sandbox\SecurityPolicy;
 use Yii;
 
-
 /**
  * Class VCardUser
  * @package humhub\modules\popovervcard\widgets
@@ -38,7 +37,7 @@ class VCardUser extends Widget
         $twig->addExtension(new SandboxExtension(new SecurityPolicy(
             ['if', 'for'],
             ['escape', 'e'],
-            [Profile::class => ProfileField::find()->select('internal_name')->column()]
+            [Profile::class => ProfileField::find()->select('internal_name')->column()],
         ), true));
 
         $templateParams = ['user' => $this->user, 'profile' => $this->user->profile];
@@ -52,7 +51,7 @@ class VCardUser extends Widget
 
         return $this->render('vcard-user', [
             'user' => $this->user,
-            'description' => $description
+            'description' => $description,
         ]);
     }
 
