@@ -9,7 +9,6 @@ return [
     'Open space' => '',
     'See more information about the template language:' => '',
     'Send message' => '',
-    'Shows a vcard popover in stream user and space links.' => '',
     'Space VCard' => '',
     'The current member count.' => '',
     'The description of this space.' => '',
@@ -19,7 +18,6 @@ return [
     'The name of this space.' => '',
     'Twig for Template Designers' => '',
     'User VCard' => '',
-    'VCard Popover' => '',
     'Variable name' => '',
     'You can use any field from the user model.' => '',
 ];
