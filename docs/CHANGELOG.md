@@ -4,6 +4,7 @@ Changelog
 1.1.7 (Unreleased)
 ---------------------------
 - Enh #27: Use PHP CS Fixer
+- Fix #28: Fix allowed properties for Twig v3.14.1+
 
 1.1.6 (September 27, 2024)
 ---------------------------
