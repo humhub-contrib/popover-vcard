@@ -11,6 +11,7 @@ use humhub\components\Widget;
 use humhub\modules\popovervcard\Module;
 use humhub\modules\user\models\Profile;
 use humhub\modules\user\models\ProfileField;
+use humhub\modules\user\models\User;
 use Twig\Environment;
 use Twig\Error\LoaderError;
 use Twig\Error\RuntimeError;
@@ -26,6 +27,9 @@ use Yii;
  */
 class VCardUser extends Widget
 {
+    /**
+     * @var User
+     */
     public $user;
 
     public function run()
@@ -33,11 +37,18 @@ class VCardUser extends Widget
         /** @var Module $module */
         $module = Yii::$app->getModule('popover-vcard');
 
+        $allowedProfileProperties = [
+            Profile::class => ProfileField::find()->select('internal_name')->column(),
+        ];
+
         $twig = new Environment(new ArrayLoader());
         $twig->addExtension(new SandboxExtension(new SecurityPolicy(
             ['if', 'for'],
             ['escape', 'e'],
-            [Profile::class => ProfileField::find()->select('internal_name')->column()],
+            $allowedProfileProperties,
+            $allowedProfileProperties + [
+                User::class => User::getTableSchema()->getColumnNames(),
+            ],
         ), true));
 
         $templateParams = ['user' => $this->user, 'profile' => $this->user->profile];
