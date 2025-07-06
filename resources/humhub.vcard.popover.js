@@ -7,16 +7,23 @@
 
 humhub.module('vcard.popover', function (module, require, $) {
 
-    var additions = require('ui.additions');
     var client = require('client');
 
     var vCardDelayTimer;
-
+    var activePopovers = new Map(); // Track active popovers
 
     module.initOnPjaxLoad = true;
 
     function init(pjax) {
         $('.vcardPopover').remove();
+
+        // Dispose of existing popovers
+        activePopovers.forEach(function(popover, element) {
+            if (popover) {
+                popover.dispose();
+            }
+        });
+        activePopovers.clear();
 
         if (pjax) {
             return;
@@ -47,10 +54,10 @@ humhub.module('vcard.popover', function (module, require, $) {
 
             clearTimeout(vCardDelayTimer);
 
-            var $this = $(this);
+            var trigger = this;
             setTimeout(function () {
                 if (!$('.popover:hover').length) {
-                    $this.popover('hide');
+                    hidePopover(trigger);
                 }
             }, 300);
         });
@@ -73,8 +80,7 @@ humhub.module('vcard.popover', function (module, require, $) {
         var contentContainerId = $trigger.data('contentcontainer-id');
         var contentContainerGuid = $trigger.data('contentcontainer-guid');
 
-
-        $("body").append('<div id="' + vCardId + '" class="hidden"></div>');
+        $("body").append('<div id="' + vCardId + '" class="d-none"></div>');
 
         var data = {
             guid: contentContainerGuid,
@@ -95,26 +101,51 @@ humhub.module('vcard.popover', function (module, require, $) {
         var $trigger = $(trigger);
         var $content = $(content);
 
-        var $popover = $trigger.popover({
+        // Dispose of existing popover for this trigger
+        if (activePopovers.has(trigger)) {
+            activePopovers.get(trigger).dispose();
+        }
+
+        // Create new popover instance
+        var popover = new bootstrap.Popover(trigger, {
             trigger: 'manual',
             html: true,
-            placement: 'auto left',
+            placement: 'auto',
             container: 'body',
             content: content,
-            animation: true
-        }).data('bs.popover').tip().addClass('vcardPopover');
-
-        $trigger.popover('show');
-
-        // Popover seems to get rid of inline styles, so we replace the content
-        $popover.find('.vcardContent').replaceWith($content.find('.vcardContent'));
-
-        // Make sure the image itself is not a popover target
-        $popover.find('[data-contentcontainer-id]').removeAttr('data-contentcontainer-id');
-
-        $('.vcardPopover').one('mouseleave', function () {
-            $trigger.popover('hide');
+            animation: true,
+            customClass: 'vcardPopover'
         });
+
+        // Store the popover instance
+        activePopovers.set(trigger, popover);
+
+        // Show the popover
+        popover.show();
+
+        // Get the popover element after it's shown
+        var popoverElement = document.querySelector('.popover.vcardPopover:last-child');
+        if (popoverElement) {
+            var $popover = $(popoverElement);
+
+            // Popover seems to get rid of inline styles, so we replace the content
+            $popover.find('.vcardContent').replaceWith($content.find('.vcardContent'));
+
+            // Make sure the image itself is not a popover target
+            $popover.find('[data-contentcontainer-id]').removeAttr('data-contentcontainer-id');
+
+            // Add mouseleave handler to popover
+            $popover.one('mouseleave', function () {
+                hidePopover(trigger);
+            });
+        }
+    }
+
+    function hidePopover(trigger) {
+        var popover = activePopovers.get(trigger);
+        if (popover) {
+            popover.hide();
+        }
     }
 
     module.export({
@@ -122,4 +153,3 @@ humhub.module('vcard.popover', function (module, require, $) {
     });
 
 });
-
