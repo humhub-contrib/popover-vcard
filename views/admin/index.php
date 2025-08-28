@@ -5,7 +5,7 @@
  * @license https://www.humhub.com/licences
  */
 
-use yii\bootstrap\ActiveForm;
+use humhub\widgets\form\ActiveForm;
 use yii\helpers\Html;
 
 ?>
@@ -15,7 +15,7 @@ use yii\helpers\Html;
         <?php $form = ActiveForm::begin(['id' => 'configure-form', 'enableClientValidation' => false, 'enableClientScript' => false]); ?>
 
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <h4><?= Yii::t('PopoverVcardModule.base', 'User VCard'); ?></h4>
                 <br/>
                 <?= $form->field($model, 'userEnabled')->checkbox(); ?>
@@ -25,8 +25,8 @@ use yii\helpers\Html;
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <colgroup>
-                            <col class="col-xs-5">
-                            <col class="col-xs-7">
+                            <col class="col-5">
+                            <col class="col-7">
                         </colgroup>
                         <thead>
                         <tr>
@@ -59,7 +59,7 @@ use yii\helpers\Html;
                     </table>
                 </div>
             </div>
-            <div class="col-md-6">
+            <div class="col-lg-6">
                 <h4><?= Yii::t('PopoverVcardModule.base', 'Space VCard'); ?></h4>
                 <br/>
                 <?= $form->field($model, 'spaceEnabled')->checkbox(); ?>
@@ -68,8 +68,8 @@ use yii\helpers\Html;
                 <div class="table-responsive">
                     <table class="table table-bordered table-striped">
                         <colgroup>
-                            <col class="col-xs-5">
-                            <col class="col-xs-7">
+                            <col class="col-5">
+                            <col class="col-7">
                         </colgroup>
                         <thead>
                         <tr>
@@ -106,7 +106,7 @@ use yii\helpers\Html;
             </a>
         </p>
 
-        <div class="form-group">
+        <div class="mb-3">
             <?= Html::submitButton(Yii::t('base', 'Save'), ['class' => 'btn btn-primary', 'data-ui-loader' => '']) ?>
         </div>
 
