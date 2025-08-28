@@ -55,7 +55,7 @@ class VCardSpace extends Widget
         try {
             $description = $twig->createTemplate($module->getConfiguration()->spaceContent)
                 ->render($templateParams);
-        } catch (LoaderError | RuntimeError | SyntaxError $e) {
+        } catch (LoaderError|RuntimeError|SyntaxError $e) {
             $description = $e->getMessage();
         }
 
