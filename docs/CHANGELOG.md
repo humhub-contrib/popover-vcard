@@ -1,13 +1,20 @@
 Changelog
 =========
 
-1.2.0 (Unreleased)
-------------------
+1.2.0 (August 28, 2025)
+-----------------------
 - Fix: Update module resources path
+- Enh #33: Migration to Bootstrap 5 for HumHub 1.18
 
-1.1.6 (Unreleased)
-------------------------
+1.1.7 (January 13, 2025)
+-----------------------
+- Enh #27: Use PHP CS Fixer
+- Fix #28: Fix allowed properties for Twig v3.14.1+
+
+1.1.6 (September 27, 2024)
+---------------------------
 - Fix: Fix translation category
+- Fix: Remove module name translation
 
 1.1.5 (January 30, 2024)
 ------------------------

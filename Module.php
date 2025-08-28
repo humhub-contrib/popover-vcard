@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @link https://www.humhub.org/
  * @copyright Copyright (c) 2018 HumHub GmbH & Co. KG
@@ -8,7 +9,6 @@
 namespace humhub\modules\popovervcard;
 
 use humhub\modules\popovervcard\models\Configuration;
-use Yii;
 use yii\helpers\Url;
 
 class Module extends \humhub\components\Module
@@ -22,17 +22,6 @@ class Module extends \humhub\components\Module
             '/popover-vcard/admin',
         ]);
     }
-
-    public function getName()
-    {
-        return Yii::t('PopoverVcardModule.base', 'VCard Popover');
-    }
-
-    public function getDescription()
-    {
-        return Yii::t('PopoverVcardModule.base', 'Shows a vcard popover in stream user and space links.');
-    }
-
 
     /**
      * Returns the module configuration model

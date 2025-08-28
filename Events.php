@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @link https://www.humhub.org/
  * @copyright Copyright (c) 2018 HumHub GmbH & Co. KG
@@ -10,13 +11,11 @@ namespace humhub\modules\popovervcard;
 use humhub\modules\popovervcard\widgets\VCardLoader;
 use humhub\widgets\LayoutAddons;
 
-
 /**
  * @author luke
  */
 class Events
 {
-
     public static function onLayoutAddonsInit($event)
     {
 

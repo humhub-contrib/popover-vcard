@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @link https://www.humhub.org/
  * @copyright Copyright (c) 2018 HumHub GmbH & Co. KG
@@ -7,22 +8,21 @@
 
 namespace humhub\modules\popovervcard\assets;
 
-use humhub\modules\ui\view\components\View;
+use humhub\components\View;
 use yii\helpers\Url;
 use yii\web\AssetBundle;
 
 class Assets extends AssetBundle
 {
-
     public $publishOptions = [
-        'forceCopy' => false
+        'forceCopy' => false,
     ];
     public $sourcePath = '@popover-vcard/resources';
     public $css = [
-        'humhub.vcard.popover.css'
+        'humhub.vcard.popover.css',
     ];
     public $js = [
-        'humhub.vcard.popover.js'
+        'humhub.vcard.popover.js',
     ];
 
     /**
@@ -35,7 +35,7 @@ class Assets extends AssetBundle
 
         $view->registerJsConfig('vcard.popover', [
             'delay' => 500,
-            'loadUrl' =>  Url::to(['/popover-vcard/index/load'])
+            'loadUrl' =>  Url::to(['/popover-vcard/index/load']),
         ]);
     }
 

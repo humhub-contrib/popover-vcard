@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @link https://www.humhub.org/
  * @copyright Copyright (c) 2018 HumHub GmbH & Co. KG
@@ -15,7 +16,6 @@ use humhub\modules\space\models\Space;
 use humhub\modules\user\models\User;
 use Yii;
 use yii\web\HttpException;
-
 
 /**
  * Class IndexController
@@ -39,7 +39,7 @@ class IndexController extends Controller
         $contentContainerGuid = Yii::$app->request->post('guid');
 
 
-        if($contentContainerId !== null) {
+        if ($contentContainerId !== null) {
             $contentContainer = ContentContainer::findOne(['id' => $contentContainerId]);
         } elseif ($contentContainerGuid !== null) {
             $contentContainer = ContentContainer::findOne(['guid' => $contentContainerGuid]);

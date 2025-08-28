@@ -1,13 +1,12 @@
 <?php
-return array (
+return [
   '<strong>VCard</strong> Configuration' => '',
   'Description' => 'Beskrivelse',
   'Each available profile field.' => '',
   'Open profile' => '',
-  'Open space' => '',
+  'Open space' => 'Åbn Rum',
   'See more information about the template language:' => '',
   'Send message' => 'Send besked',
-  'Shows a vcard popover in stream user and space links.' => '',
   'Space VCard' => '',
   'The current member count.' => '',
   'The description of this space.' => '',
@@ -17,8 +16,7 @@ return array (
   'The name of this space.' => '',
   'Twig for Template Designers' => '',
   'User VCard' => '',
-  'VCard Popover' => '',
   'Variable name' => '',
   'You can use any field from the user model.' => '',
-  '{count} members' => '',
-);
+  '{count} members' => '{count} medlemmer',
+];

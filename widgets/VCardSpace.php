@@ -1,4 +1,5 @@
 <?php
+
 /**
  * @link https://www.humhub.org/
  * @copyright Copyright (c) 2018 HumHub GmbH & Co. KG
@@ -20,14 +21,12 @@ use Twig\Loader\ArrayLoader;
 use Twig\Sandbox\SecurityPolicy;
 use Yii;
 
-
 /**
  * Class VCardUser
  * @package humhub\modules\popovervcard\widgets
  */
 class VCardSpace extends Widget
 {
-    
     /**
      * @var Space
      */
@@ -35,7 +34,7 @@ class VCardSpace extends Widget
 
     public function run()
     {
-        if($this->space->visibility === Space::VISIBILITY_NONE && !$this->space->isMember()) {
+        if ($this->space->visibility === Space::VISIBILITY_NONE && !$this->space->isMember()) {
             return false;
         }
         /** @var Module $module */
@@ -44,7 +43,12 @@ class VCardSpace extends Widget
         $memberCount = Membership::getSpaceMembersQuery($this->space)->count();
 
         $twig = new Environment(new ArrayLoader());
-        $twig->addExtension(new SandboxExtension(new SecurityPolicy(['if', 'for'], ['escape', 'e']), true));
+        $twig->addExtension(new SandboxExtension(new SecurityPolicy(
+            ['if', 'for'],
+            ['escape', 'e'],
+            [],
+            [Space::class => ['name', 'description']],
+        ), true));
 
         $templateParams = ['space' => $this->space, 'memberCount' => $memberCount];
 
@@ -58,7 +62,7 @@ class VCardSpace extends Widget
         return $this->render('vcard-space', [
             'space' => $this->space,
             'description' => $description,
-            'memberCount' => $memberCount
+            'memberCount' => $memberCount,
         ]);
     }
 
