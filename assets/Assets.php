@@ -8,15 +8,12 @@
 
 namespace humhub\modules\popovervcard\assets;
 
-use humhub\components\View;
+use humhub\components\assets\AssetBundle;
 use yii\helpers\Url;
-use yii\web\AssetBundle;
 
 class Assets extends AssetBundle
 {
-    public $publishOptions = [
-        'forceCopy' => false,
-    ];
+    public $forceCopy = false;
     public $sourcePath = '@popover-vcard/resources';
     public $css = [
         'humhub.vcard.popover.css',
@@ -26,8 +23,7 @@ class Assets extends AssetBundle
     ];
 
     /**
-     * @param View $view
-     * @return void|AssetBundle
+     * @inheritdoc
      */
     public static function register($view)
     {
