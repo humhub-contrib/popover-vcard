@@ -5,8 +5,9 @@
  * @license https://www.humhub.com/licences
  */
 
+use humhub\widgets\bootstrap\Button;
+use humhub\widgets\bootstrap\Link;
 use humhub\widgets\form\ActiveForm;
-use yii\helpers\Html;
 
 ?>
 <div class="panel panel-default">
@@ -101,14 +102,12 @@ use yii\helpers\Html;
         <br/>
         <p>
             <?= Yii::t('PopoverVcardModule.base', 'See more information about the template language:'); ?>
-            <a href="https://twig.symfony.com/doc/2.x/templates.html" target="_blank">
-                <i class="fa fa-arrow-right"></i> <?= Yii::t('PopoverVcardModule.base', 'Twig for Template Designers'); ?>
-            </a>
+            <?= Link::to(Yii::t('PopoverVcardModule.base', 'Twig for Template Designers'), 'https://twig.symfony.com/doc/2.x/templates.html')
+                ->icon('arrow-right')
+                ->blank() ?>
         </p>
 
-        <div class="mb-3">
-            <?= Html::submitButton(Yii::t('base', 'Save'), ['class' => 'btn btn-primary', 'data-ui-loader' => '']) ?>
-        </div>
+        <?= Button::save()->submit() ?>
 
         <?php ActiveForm::end(); ?>
 

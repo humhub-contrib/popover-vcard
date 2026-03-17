@@ -9,6 +9,7 @@ use humhub\helpers\Html;
 use humhub\modules\popovervcard\widgets\VCardAddons;
 use humhub\modules\user\widgets\Image;
 use humhub\widgets\bootstrap\Button;
+use humhub\widgets\modal\ModalButton;
 
 /* @var $this \humhub\components\View */
 /* @var $user \humhub\modules\user\models\User */
@@ -32,7 +33,9 @@ use humhub\widgets\bootstrap\Button;
         </div>
         <div class="vcardFooter">
             <?php if (Yii::$app->hasModule('mail') && !Yii::$app->user->isGuest && Yii::$app->user->id !== $user->id): ?>
-                <?= Html::a(Yii::t('PopoverVcardModule.base', 'Send message'), ['/mail/mail/create', 'ajax' => 1, 'userGuid' => $user->guid], ['class' => 'btn btn-primary btn-sm', 'data-bs-target' => '#globalModal']); ?>
+                <?= ModalButton::primary(Yii::t('PopoverVcardModule.base', 'Send message'))
+                    ->load(['/mail/mail/create', 'ajax' => 1, 'userGuid' => $user->guid])
+                    ->sm() ?>
             <?php endif; ?>
             <div class="float-end">
                 <?= Button::primary(Yii::t('PopoverVcardModule.base', 'Open profile'))
