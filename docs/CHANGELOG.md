@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.3.0 (Unreleased)
+-----------------------
+- Fix #39: Update content container images
+
 1.2.1 (Unreleased)
 -----------------------
 - Fix #37: Fix asset bundle
