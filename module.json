@@ -5,7 +5,8 @@
   "keywords": ["business card, popover, hover, profile information"],
   "version": "1.2.1",
   "humhub": {
-    "minVersion": "1.18"
+    "minVersion": "1.18",
+    "maxVersion": "1.18"
   },
    "homepage": "https://github.com/humhub-contrib/popover-vcard",
   "authors": [
