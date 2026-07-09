@@ -19,8 +19,7 @@ use humhub\widgets\bootstrap\Button;
 
 <div class="vcardWrapper">
     <div class="vcardContent">
-        <div class="vcardHeader"
-             style="<?php if ($space->getProfileBannerImage()->hasImage()): ?> background-image: url(<?= $space->getProfileBannerImage()->getUrl(); ?>);<?php endif; ?>">
+        <div class="vcardHeader"<?php if ($space->bannerImage->exists()): ?> style="background-image: url(<?= $space->bannerImage->getUrl() ?>)"<?php endif ?>>
             <div class="headerContent">
                 <div class="imageWrapper float-start"><?= Image::widget(['space' => $space, 'width' => 95]); ?></div>
                 <div class="displayName"><?= Html::encode($space->name); ?></div>

@@ -18,8 +18,7 @@ use humhub\widgets\modal\ModalButton;
 
 <div class="vcardWrapper">
     <div class="vcardContent">
-        <div class="vcardHeader"
-             style="<?php if ($user->getProfileBannerImage()->hasImage()): ?> background-image: url(<?= $user->getProfileBannerImage()->getUrl(); ?>);<?php endif; ?>">
+        <div class="vcardHeader"<?php if ($user->bannerImage->exists()): ?> style="background-image: url(<?= $user->bannerImage->getUrl() ?>)"<?php endif ?>>
             <div class="headerContent">
                 <div class="imageWrapper float-start"><?= Image::widget(['user' => $user, 'width' => 95]); ?></div>
                 <div class="displayName"><?= Html::encode($user->displayName); ?></div>
