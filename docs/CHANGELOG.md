@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.3.1 (Unreleased)
+------------------
+- Fix #42: Access checks for vCards, 404 handling, Twig security errors; removed demo page
+
 1.3.0 (July 31, 2026)
 ---------------------
 - Fix #39: Update content container images
