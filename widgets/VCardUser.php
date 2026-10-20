@@ -14,9 +14,7 @@ use humhub\modules\user\models\Profile;
 use humhub\modules\user\models\ProfileField;
 use humhub\modules\user\models\User;
 use Twig\Environment;
-use Twig\Error\LoaderError;
-use Twig\Error\RuntimeError;
-use Twig\Error\SyntaxError;
+use Twig\Error\Error as TwigError;
 use Twig\Extension\SandboxExtension;
 use Twig\Loader\ArrayLoader;
 use Twig\Sandbox\SecurityPolicy;
@@ -57,7 +55,7 @@ class VCardUser extends Widget
         try {
             $description = $twig->createTemplate($module->getConfiguration()->userContent)
                 ->render($templateParams);
-        } catch (LoaderError|RuntimeError|SyntaxError $e) {
+        } catch (TwigError $e) {
             $description = $e->getMessage();
         }
 
