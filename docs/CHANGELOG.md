@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.4.0 (Unreleased)
+------------------
+- Enh: Colour tokens of the core 1.20 instead of the deprecated ones (humhub/humhub#8707)
+
 1.3.1 (Unreleased)
 ------------------
 - Fix #42: Access checks for vCards, 404 handling, Twig security errors; removed demo page
