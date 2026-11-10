@@ -4,6 +4,7 @@ Changelog
 1.4.0 (Unreleased)
 ------------------
 - Enh: Colour tokens of the core 1.20 instead of the deprecated ones (humhub/humhub#8707)
+- Enh: The lines of the card take `--bs-border-color` instead of `--hh-border-color-strong`, which the core removed (humhub/humhub#8747)
 
 1.3.1 (Unreleased)
 ------------------
