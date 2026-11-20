@@ -10,6 +10,7 @@ use humhub\helpers\Html;
 use humhub\modules\popovervcard\widgets\VCardAddons;
 use humhub\modules\space\widgets\Image;
 use humhub\widgets\bootstrap\Button;
+use humhub\widgets\Icon;
 
 /* @var $this \humhub\components\View */
 /* @var $space \humhub\modules\space\models\Space */
@@ -23,8 +24,7 @@ use humhub\widgets\bootstrap\Button;
             <div class="headerContent">
                 <div class="imageWrapper float-start"><?= Image::widget(['space' => $space, 'width' => 95]); ?></div>
                 <div class="displayName"><?= Html::encode($space->name); ?></div>
-                <div class="title"><i
-                            class="fa fa-users"></i> <?= Yii::t('PopoverVcardModule.base', '{count} members', ['count' => $memberCount]); ?>
+                <div class="title"><?= Icon::get('users') ?> <?= Yii::t('PopoverVcardModule.base', '{count} members', ['count' => $memberCount]); ?>
                 </div>
             </div>
         </div>

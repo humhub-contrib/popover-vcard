@@ -5,6 +5,7 @@ Changelog
 ------------------
 - Enh: Colour tokens of the core 1.20 instead of the deprecated ones (humhub/humhub#8707)
 - Enh: The lines of the card take `--bs-border-color` instead of `--hh-border-color-strong`, which the core removed (humhub/humhub#8747)
+- Enh: Tabler icon (`Icon::get('users')`) for the member count of the space card instead of Font Awesome markup
 
 1.3.1 (Unreleased)
 ------------------
